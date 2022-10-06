@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -22,6 +23,7 @@
 </head>
 
 <body>
+    
     <section class="team text-center py-5">
         <div class="container">
 
@@ -29,7 +31,11 @@
                 <h1>Welcome to Hacktoberfest 2022</h1>
                 <p class="text-muted">Generate your pull request as fast as possible</p>
             </div>
-
+            <div>
+                <h4 class="profile-count">Profile Count <span id="profile-count"></span></h4>
+            </div>
+            <br>
+            <br>
             <div class=" row d-flex justify-content-between align-items-center flex-wrap">
 
 
@@ -73,6 +79,17 @@
                         <div class="content mt-2">
                             <h4>Harshal Patil</h4>
                             <p class="text-muted">Web Dev it is</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="img-block mb-5">
+                        <img src="https://github.com/Abhash-Chakraborty.png" class="img-fluid  img-thumbnail rounded-circle"
+                            alt="image1">
+                        <div class="content mt-2">
+                            <h4>Abhash Chakraborty</h4>
+                            <p class="text-muted">Web Developer</p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +168,7 @@
                             class="img-fluid  img-thumbnail rounded-circle" alt="arnav img">
                         <div class="content mt-2">
                             <h4>Sujeet Gupta</h4>
-                            <p class="text-muted">Chomu Chutiya</p>
+                            <p class="text-muted">Tech Head</p>
                         </div>
                     </div>
                 </div>
@@ -202,52 +219,23 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="img-block mb-5">
-                        <img src="https://avatars.githubusercontent.com/u/94732643?v=4"
-                            class="img-fluid img-thumbnail rounded-circle" alt="Aditya img">
-                        <div class="content mt-2">
-                            <h4>Aditya Joshi</h4>
-                            </h4>
-                            <p class="text-muted">Web D</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="img-block mb-5">
-                        <img src="https://avatars.githubusercontent.com/u/76549082?v=4"
-                            class="img-fluid img-thumbnail rounded-circle" alt="kd img">
-                        <div class="content mt-2">
-                            <h4>Kamakshi Dixit</h4>
-                            </h4>
-                            <p class="text-muted">Web D</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- sahil kamate profile -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="img-block mb-5">
-                        <img src="https://avatars.githubusercontent.com/u/45514385?v=4"
-                            class="img-fluid img-thumbnail rounded-circle" alt="kd img">
-                        <div class="content mt-2">
-                            <h4>Sahil Kamate</h4>
-                            </h4>
-                            <p class="text-muted">Developer</p>
-
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Paste your template above this comment this -->
 
             </div>
         </div>
     </section>
+    <script>
+        let matches = 0;
+        let i = 0;
+        for(i = 0; i < document.all.length; i++){
+        if(document.all(i).className.indexOf('col-md-6 col-lg-3') != -1)
+        {
+            matches++;
+        }
+        }
 
+        $('#profile-count').text(matches);
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -257,6 +245,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script></script>
 </body>
 
 </html>
